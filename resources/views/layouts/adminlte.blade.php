@@ -150,37 +150,37 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ route('Service.index') }}" class="nav-link {{ activeRoute('service*') }}">
+                            <a href="{{ route('service.index') }}" class="nav-link {{ activeRoute('service*') }}">
                                 <i class="nav-icon bi bi-palette"></i>
                                 <p>Services</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ route('Doctor.index') }}" class="nav-link {{ activeRoute('doctor*') }}">
+                            <a href="{{ route('doctor.index') }}" class="nav-link {{ activeRoute('doctor*') }}">
                                 <i class="nav-icon bi bi-person-badge"></i>
                                 <p>Doctors</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ route('Category.index') }}" class="nav-link {{ activeRoute('category*') }}">
+                            <a href="{{ route('category.index') }}" class="nav-link {{ activeRoute('category*') }}">
                                 <i class="nav-icon bi bi-tag-fill"></i>
                                 <p>Categories</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ route('Transaction.index') }}" class="nav-link {{ activeRoute('transaction*') }}">
+                            <a href="{{ route('transaction.index') }}" class="nav-link {{ activeRoute('transaction*') }}">
                                 <i class="nav-icon bi bi-receipt"></i>
                                 <p>Transactions</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ route('Article.index') }}" class="nav-link {{ activeRoute('article*') }}">
+                            <a href="{{ route('article.index') }}" class="nav-link {{ activeRoute('article*') }}">
                                 <i class="nav-icon bi bi-newspaper"></i>
                                 <p>Articles</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ route('User.index') }}" class="nav-link {{ activeRoute('user*') }}">
+                            <a href="{{ route('user.index') }}" class="nav-link {{ activeRoute('user*') }}">
                                 <i class="nav-icon bi bi-people-fill"></i>
                                 <p>Users</p>
                             </a>

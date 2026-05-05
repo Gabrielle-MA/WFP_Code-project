@@ -22,9 +22,19 @@ Route::get('/', function () {
 //     Route::post('/register', 'register');
 // });
 
-Route::resource('User',UserConstoller::class);
-Route::resource('Doctor',DoctorController::class);
-Route::resource('Service',ServiceController::class);
-Route::resource('Category',CategoryController::class);
-Route::resource('Transaction',TransactionController::class);
-Route::resource('Article',ArticleController::class);
+Route::resource('user',UserConstoller::class);
+Route::resource('doctor',DoctorController::class);
+Route::resource('service',ServiceController::class);
+Route::resource('category',CategoryController::class);
+Route::resource('transaction',TransactionController::class);
+Route::resource('article',ArticleController::class);
+
+Route::post(
+    "/category/showinfo",
+    [CategoryController::class, 'showinfo']
+)->name("category.showinfo");
+
+Route::post(
+    "/category/showListServices",
+    [CategoryController::class, 'showListServices']
+)->name("category.showListServices");

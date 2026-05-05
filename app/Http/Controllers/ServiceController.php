@@ -12,7 +12,7 @@ class ServiceController extends Controller
      */
     public function index()
     {
-        $allData = Service::all();;
+        $allData = Service::all();
         return view('service/service', ['allServiceData'=> $allData]);
     }
 
@@ -38,6 +38,9 @@ class ServiceController extends Controller
     public function show(Service $service)
     {
         //
+        // dd($service);
+
+        return view('service.detailService', compact('service'));
     }
 
     /**

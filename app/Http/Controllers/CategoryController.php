@@ -13,7 +13,7 @@ class CategoryController extends Controller
     public function index()
     {
         $allData = Category::all();;
-        return view('category/category', ['allCategoryData'=> $allData]);
+        return view('category/category', ['allCategoryData' => $allData]);
     }
 
     /**
@@ -62,5 +62,30 @@ class CategoryController extends Controller
     public function destroy(Category $category)
     {
         //
+    }
+
+    public function showInfo()
+    {
+        $highestServiceCategory = Category::withCount('service')
+            ->orderByDesc('service_count')
+            ->first();
+
+        return response()->json(array(
+            'status' => 'oke',
+            'msg' => '<div class="alert alert-success">The category with the most services is: <b>' .
+                $highestServiceCategory->category_name . '</b></div>'
+        ), 200);
+    }
+
+    public function showListServices()
+    {
+        $category = Category::find($_POST['idcat']);
+        $name = $category->category_name;
+        $data = $category->services;
+        return response()->json(array(
+            'status' => 'oke',
+            'title' => $name . ' Service List',
+            'body' => view('category.showListServices', compact('name', 'data'))->render()
+        ), 200);
     }
 }
